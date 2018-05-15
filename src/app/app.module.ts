@@ -8,6 +8,7 @@ import {ContactComponent} from './contact/contact.component';
 import { ProductsComponent } from './products/products.component';
 import { ServicesComponent } from './services/services.component';
 import { Service1Component } from './services/service1/service1.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { Service1Component } from './services/service1/service1.component';
     Service1Component
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

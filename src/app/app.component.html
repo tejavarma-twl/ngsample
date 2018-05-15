@@ -1,9 +1,24 @@
 <div class="container">
   <h2>Hello people</h2>
-  <h3>Welcome to <strong>{{ title }}</strong></h3>
-  <app-about></app-about>
-  <contact></contact>
-  <app-services></app-services>
-  <app-products></app-products>
+  <h3>Welcome to <strong>{{ someName }}  {{ (showthis/67.5).toFixed(2) }}</strong></h3>
+  <!--<app-about></app-about>-->
+  <!--<contact></contact>-->
+  <!--<app-services></app-services>-->
+  <!--<app-products></app-products>-->
+  <input type="text" name="" id="" (input)="addThisData($event)">
+
+  <button class="btn btn-primary" (click)="buttonClicked('Node')">
+    Node
+  </button>
+  <button class="btn btn-primary" (click)="buttonClicked('React')">
+    React
+  </button>
+  <button class="btn btn-primary" (click)="buttonClicked('Angular')">
+    Angular
+  </button>
+
+
+  <input type="text" name="" id="" [(ngModel)]="showthis">
+
 </div>
 

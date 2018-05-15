@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Angular';
+  someName = 'Angular';
+  showthis = 0;
+  buttonClicked(value){
+    this.someName = value;
+  }
+  addThisData(val){
+    this.someName = val.target.value;
+  }
+
 }
