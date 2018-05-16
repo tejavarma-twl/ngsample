@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+.choose{
+  background: blue;
+  color: aliceblue;
+  padding: 10px;
+}
+
+
+.letters{
+  font-size:33px;
+}

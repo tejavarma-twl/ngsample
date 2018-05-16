@@ -1,24 +1,59 @@
-<div class="container">
-  <h2>Hello people</h2>
-  <h3>Welcome to <strong>{{ someName }}  {{ (showthis/67.5).toFixed(2) }}</strong></h3>
-  <!--<app-about></app-about>-->
-  <!--<contact></contact>-->
-  <!--<app-services></app-services>-->
-  <!--<app-products></app-products>-->
-  <input type="text" name="" id="" (input)="addThisData($event)">
 
-  <button class="btn btn-primary" (click)="buttonClicked('Node')">
-    Node
-  </button>
-  <button class="btn btn-primary" (click)="buttonClicked('React')">
-    React
-  </button>
-  <button class="btn btn-primary" (click)="buttonClicked('Angular')">
-    Angular
-  </button>
+<!--structural directive-->
 
-
-  <input type="text" name="" id="" [(ngModel)]="showthis">
-
+<div *ngIf="classSwitch">
+  This is hsown
+</div>
+<div *ngIf="!classSwitch">
+  This is hidden
 </div>
 
+<!--<div class="container">-->
+  <!--<h2>Hello people</h2>-->
+  <!--<h3>Welcome to <strong>{{ someName }}  {{ (showthis/67.5).toFixed(2) }}</strong></h3>-->
+  <!--&lt;!&ndash;<app-about></app-about>&ndash;&gt;-->
+  <!--&lt;!&ndash;<contact></contact>&ndash;&gt;-->
+  <!--&lt;!&ndash;<app-services></app-services>&ndash;&gt;-->
+  <!--&lt;!&ndash;<app-products></app-products>&ndash;&gt;-->
+  <!--<input type="text" name="" id="" (input)="addThisData($event)">-->
+
+  <!--<button class="btn btn-primary" (click)="buttonClicked('Node')">-->
+    <!--Node-->
+  <!--</button>-->
+  <!--<button class="btn btn-primary" (click)="buttonClicked('React')">-->
+    <!--React-->
+  <!--</button>-->
+  <!--<button class="btn btn-primary" (click)="buttonClicked('Angular')">-->
+    <!--Angular-->
+  <!--</button>-->
+  <!--<input type="text" name="" id="" [(ngModel)]="showthis">-->
+<!--</div>-->
+
+<!--<div [innerHtml]="someName" [style.background]="myColor">-->
+<!--</div>-->
+<!--<div [class.choose]="classSwitch">-->
+<!--{{ someName }}-->
+<!--</div>-->
+<!--<div [class.choose]="classSwitch">-->
+  <!--{{ someName }}-->
+<!--</div>-->
+<!--<div [ngStyle]="!classSwitch?inlineStyles:''">-->
+<!--Hello-->
+<!--</div>-->
+
+<!--<div [ngClass]="{'choose':classSwitch,'letters':!classSwitch}">-->
+  <!--Hello NgClass-->
+<!--</div>-->
+
+<!--<button class="btn btn-primary" (click)="bindingButtonClicked()">Toggle Color!</button>-->
+<button class="" (click)="switchingClass()">Toggle Class!</button>
+
+<!--<table border="1">-->
+  <!--<tr>-->
+    <!--<td [attr.colspan]="2">header</td>-->
+  <!--</tr>-->
+  <!--<tr>-->
+    <!--<td>1</td>-->
+    <!--<td>2</td>-->
+  <!--</tr>-->
+<!--</table>-->
