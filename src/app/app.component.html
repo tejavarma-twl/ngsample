@@ -1,12 +1,12 @@
 
 <!--structural directive-->
 
-<div *ngIf="classSwitch">
-  This is hsown
-</div>
-<div *ngIf="!classSwitch">
-  This is hidden
-</div>
+<!--<div *ngIf="classSwitch">-->
+  <!--This is hsown-->
+<!--</div>-->
+<!--<div *ngIf="!classSwitch">-->
+  <!--This is hidden-->
+<!--</div>-->
 
 <!--<div class="container">-->
   <!--<h2>Hello people</h2>-->
@@ -46,7 +46,7 @@
 <!--</div>-->
 
 <!--<button class="btn btn-primary" (click)="bindingButtonClicked()">Toggle Color!</button>-->
-<button class="" (click)="switchingClass()">Toggle Class!</button>
+<!--<button class="" (click)="switchingClass()">Toggle Class!</button>-->
 
 <!--<table border="1">-->
   <!--<tr>-->
@@ -57,3 +57,50 @@
     <!--<td>2</td>-->
   <!--</tr>-->
 <!--</table>-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Angular Class</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" (click)="menuclick('about')">About <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="menuclick('contact')">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="menuclick('services')">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="menuclick('products')">Products</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<app-about *ngIf="about"></app-about>
+<app-contact *ngIf="contact"></app-contact>
+<app-products *ngIf="products"></app-products>
+<app-services *ngIf="services"></app-services>
+
+<ul>
+  <li>apples</li>
+  <li>bananas</li>
+  <li>papayas</li>
+  <li>oranges</li>
+</ul>
+
+<ul>
+  <li *ngFor="let f of fruits">{{f}}</li>
+</ul>
+
+<div *ngFor="let car of cars;let i = index">{{i+1}} {{car.name+" "+car.color}}</div>
+
+<ul>
+  <li>{{fruits[0]}}</li>
+  <li>{{fruits[1]}}</li>
+  <li>{{fruits[2]}}</li>
+  <li>{{fruits[3]}}</li>
+</ul>
